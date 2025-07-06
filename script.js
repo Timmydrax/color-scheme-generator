@@ -18,11 +18,9 @@ form.addEventListener("submit", function (e) {
       const colors = data.colors.map((color) => {
         return color.hex.value;
       });
-      console.log(colors);
+
       displayPalette(colors);
     });
-
-  console.log(`the seed color ${seedColor}, and the schemeMode is ${mode}`);
 });
 
 function displayPalette(colors) {
@@ -33,6 +31,20 @@ function displayPalette(colors) {
     div.className = "color-box";
     div.style.backgroundColor = color;
     div.innerHTML = `<span>${color}</span>`;
+
+    div.addEventListener("click", () => {
+      navigator.clipboard.writeText(color);
+      // Sweet alert
+      Swal.fire({
+        text: `${color} copied to clipboard!`,
+        icon: "success",
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 2000,
+        timerProgressBar: true,
+      });
+    });
 
     paletteContainer.appendChild(div);
   });
