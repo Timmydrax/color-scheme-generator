@@ -26,7 +26,6 @@ form.addEventListener("submit", function (e) {
       });
 
       console.log(color);
-      //   console.log(data);
     });
 
   console.log(`the seed color ${seedColor}, and the schemeMode is ${mode}`);
