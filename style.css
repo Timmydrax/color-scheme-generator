@@ -156,3 +156,23 @@ button {
   padding-inline: 0.75rem;
   padding-block: 0.5rem;
 }
+
+.palette-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* flex-wrap: wrap; */
+  margin-block-start: 1rem;
+  border-radius: 8px;
+}
+
+.color-box {
+  max-width: 100px;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0.5rem;
+
+}

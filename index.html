@@ -11,7 +11,12 @@
       <section class="scheme-container">
         <h1>🎨 Color Scheme Generator</h1>
         <form id="form">
-          <input class="seed-color" type="color" id="seed-color" value="#F55A5A" />
+          <input
+            class="seed-color"
+            type="color"
+            id="seed-color"
+            value="#F55A5A"
+          />
           <select name="scheme-mode" id="scheme-mode" class="scheme-mode">
             <option value="monochrome">monochrome</option>
             <option value="monochrome-dark">monochrome-dark</option>
@@ -24,7 +29,7 @@
           </select>
           <button type="submit">Get Color Scheme</button>
         </form>
-        <div class="palette-container"></div>
+        <div class="palette-container" id="palette-container"></div>
       </section>
     </main>
     <script type="module" src="script.js"></script>
