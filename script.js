@@ -11,7 +11,7 @@ form.addEventListener("submit", function (e) {
   const mode = schemeMode.value;
 
   fetch(
-    `https://www.thecolorapi.com/scheme?hex=${seedColor}&format=json&mode=${mode}&count=6`
+    `https://www.thecolorapi.com/scheme?hex=${seedColor}&format=json&mode=${mode}&count=5`
   )
     .then((res) => res.json())
     .then((data) => {
