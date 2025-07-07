@@ -20,6 +20,19 @@ form.addEventListener("submit", function (e) {
       });
 
       displayPalette(colors);
+    })
+    .catch((error) => {
+      console.log("Fetch error:", error);
+
+      Swal.fire({
+        icon: "error",
+        text: "Failed to fetch colors!",
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+      });
     });
 });
 
